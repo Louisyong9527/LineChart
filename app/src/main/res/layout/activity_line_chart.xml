@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_per_month"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="5dp"
+        android:text="每月业绩统计"
+        android:textSize="14sp"
+        android:ems="1"
+        android:gravity="center_vertical"
+        app:layout_constraintRight_toLeftOf="@+id/lineChart"/>
+
+
+    <TextView
+        android:id="@+id/tv_month_total"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="5dp"
+        android:text="累计业绩统计"
+        android:textSize="14sp"
+        android:ems="1"
+        android:gravity="center_vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/lineChart"/>
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_per_month"
+        app:layout_constraintEnd_toStartOf="@+id/tv_month_total"
+        app:layout_constraintStart_toEndOf="@+id/tv_per_month"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
